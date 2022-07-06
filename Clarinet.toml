@@ -1,0 +1,21 @@
+[project]
+name = "reward-smart-contract-clarity"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+analysis = ["check_checker"]
+costs_version = 2
+
+[contracts.rewards]
+path = "contracts/rewards.clar"
+depends_on = ["vibes-token"]
+
+
+[contracts.sip-010-trait]
+path = "contracts/sip-010-trait.clar"
+depends_on = []
+
+[contracts.vibes-token]
+path = "contracts/vibes-token.clar"
+depends_on = ["sip-010-trait"]
